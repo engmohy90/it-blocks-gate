@@ -1,14 +1,25 @@
 <ion-header>
   <ion-navbar>
     <ion-title>
-      Ionic Blank
+      it-blocks GAT
     </ion-title>
   </ion-navbar>
 </ion-header>
 
 <ion-content padding>
-  The world is your oyster.
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will be your guide.
-  </p>
+  <ion-card>
+
+    <ion-card-content>
+      <p> please make sure you are connected to</p>
+      <p style="color: green"> it-blocks-gate</p>
+      <p> wifi with password </p>
+      <p style="color: green">0123456789</p>
+    </ion-card-content>
+  </ion-card>
+  <ion-row>
+    <ion-col class="validation-col">
+      <button [disabled]="sendAgain" ion-button class="submit-btn" full (click)="sendSMSAgain()">
+        open the door <span *ngIf="sendAgain">( {{counter}} )</span></button>
+    </ion-col>
+  </ion-row>
 </ion-content>
